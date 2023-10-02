@@ -1,0 +1,27 @@
+server:
+  port: 20340
+
+spring:
+  application.name: crypto-service
+  data:
+    mongodb:
+      host: localhost
+      port: 27017
+      database: angularpay
+      username: service_account
+      password: service_account_password
+      authentication-database: angularpay
+
+angularpay:
+  selfUrl: http://localhost:20340
+  cipherUrl: http://localhost:20420
+  schedulerUrl: http://localhost:20430
+  pageSize: 50
+  codecSizeInMB: 50
+  maxUpdateRetry: 10
+  cipher:
+    enabled: true
+  redis:
+    host: localhost
+    port: 6379
+    timeout: 10000
